@@ -1,0 +1,22 @@
+*urxvt.scrollBar: false
+URxvt*font: xft:Termsyn:style=Regular:size=12
+URxvt*boldFont: xft:Termsyn:style=Bold:size=12
+URxvt.background: #333333
+URxvt.foreground: white
+*color4:#1e90ff
+*color12:#4682b4
+*urxvt.perl-ext-common: default,url-select,clipboard,tabbedex,fullscreen
+*urxvt.keysym.M-c: perl:clipboard:copy
+*urxvt.keysym.M-v: perl:clipboard:paste
+URxvt*geometry: 125x50
+*urxvt.url-select.underline: true
+*urxvt.urlLauncher: firefox
+URxvt*saveLines: 2048
+URxvt.depth: 32
+URxvt.tabbed.tabbar-bg: 8
+URxvt.tabbed.tabbar-fg: 12
+URxvt.tabbed.tab-bg: 4
+URxvt.tabbed.tab-fg: 15
+URxvt.tabbed.autohide: true
+URxvt.tabbed.title: false
+URxvt.keysym.F11:perl:fullscreen:switch
