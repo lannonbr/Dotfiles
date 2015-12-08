@@ -25,12 +25,16 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-function'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
 Plug 'matchit.zip'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'vim-utils/vim-man'
+Plug 'janko-m/vim-test'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'mhinz/vim-signify'
+Plug 'nelstrom/vim-textobj-rubyblock'
 
 call plug#end()
 
@@ -41,7 +45,9 @@ syntax on
 set noet ci pi sts=0 sw=4 ts=4
 set incsearch
 set noswapfile
-set t_Co=256
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=8
 
 augroup ruby
 	autocmd!
@@ -59,7 +65,8 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 let mapleader = ','
 
-nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <PageUp> :bprevious<CR>
+nnoremap <silent> <PageDown> :bnext<CR>
 
 " Removing arrow key functionality
 nnoremap <Up> <NOP>
@@ -85,8 +92,10 @@ nnoremap <space><space> <C-w>w
 nnoremap <leader>m <C-w>o
 nnoremap <leader>q :q<CR>
 nnoremap <leader>r :!ruby %<CR>
+nnoremap <leader>T :TestNearest<CR>
 nnoremap <leader>s :!rspec<CR>
 nnoremap <leader>cs :!reek %<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>beau :call HtmlBeautify()<CR>
-nnoremap <leader>j :!jade %<CR>
+nnoremap <leader>j :!jade -P %<CR>
+nnoremap <leader>o :e 
