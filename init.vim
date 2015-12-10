@@ -4,37 +4,53 @@ filetype off
 
 call plug#begin()
 
-"Plugins
+" Plugins
+
+" Languages
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'itchyny/lightline.vim'
-Plug 'benekastah/neomake'
-Plug 'rstacruz/sparkup'
 Plug 'kongo2002/fsharp-vim'
-Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-bundler'
-Plug 'scrooloose/nerdtree'
-Plug 'bufexplorer.zip'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/goyo.vim'
-Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'zah/nim.vim'
+Plug 'JuliaLang/julia-vim'
+
+" Text Objects
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-function'
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'nelstrom/vim-textobj-rubyblock'
+
+" Testing
+Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
+Plug 'janko-m/vim-test'
+
+" Search & Autocomplete
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'ervandew/supertab'
 Plug 'matchit.zip'
-Plug 'maksimr/vim-jsbeautify'
-Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
-Plug 'vim-utils/vim-man'
-Plug 'janko-m/vim-test'
-Plug 'gorodinskiy/vim-coloresque'
+Plug 'rstacruz/sparkup'
+
+" Git
+Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
-Plug 'nelstrom/vim-textobj-rubyblock'
+
+" UI
+Plug 'itchyny/lightline.vim'
+Plug 'mhinz/vim-startify'
+Plug 'scrooloose/nerdtree'
+Plug 'bufexplorer.zip'
+
+" Other
+Plug 'benekastah/neomake'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-bundler'
+Plug 'junegunn/goyo.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'vim-utils/vim-man'
+Plug 'gorodinskiy/vim-coloresque'
 
 call plug#end()
 
