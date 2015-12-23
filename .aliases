@@ -1,18 +1,20 @@
 alias sl='ls'
+alias rm='rm -i'
+alias ls='ls --color=auto'
+
 alias update='pacaur -Syu'
 alias search='pacaur -Ss'
 alias download='pacaur -S'
-alias rm='rm -i'
 alias remove='pacaur -R'
-alias ls='ls --color=auto'
+
 alias python='python2'
-alias wego='pushd $HOME/devel/wego/bin/ && ./wego && popd'
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+alias vim="nvim"
+
 alias fsi="fsharpi"
 alias fsc="fsharpc"
+
+alias wego='pushd $HOME/devel/wego/bin/ && ./wego && popd'
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias touchscreen="xinput --map-to-output 12 eDP1"
 alias restartnetwork="systemctl restart NetworkManager.service"
 alias backup="~/Documents/backup.sh"
-alias fsu="python ~/devel/fsuvius/fsucli.py"
-alias talks="python ~/devel/talks/talkscli.py"
-alias vim="nvim"

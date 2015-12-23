@@ -39,23 +39,19 @@ Plug 'mhinz/vim-signify'
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
-Plug 'bufexplorer.zip'
 
 " Other
 Plug 'benekastah/neomake'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-bundler'
-Plug 'junegunn/goyo.vim'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'maksimr/vim-jsbeautify'
 Plug 'vim-utils/vim-man'
 Plug 'gorodinskiy/vim-coloresque'
 
 call plug#end()
 
 filetype plugin indent on
-set nu relativenumber
+set number relativenumber
 set ignorecase smartcase
 syntax on
 set noet ci pi sts=0 sw=4 ts=4
@@ -75,12 +71,14 @@ let g:startify_list_order = [
 	\['recent files in current directory'], 'dir' ]
 let g:startify_custom_header = map(split(system('echo \"Welcome to NeoVim\" | cowsay'), '\n'), '"   ". v:val') + ['','']
 
-let g:goyo_width = 120
-
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 let mapleader = ','
 
+" No more macros (for now)
+nnoremap q <NOP>
+
+" Switch through buffers
 nnoremap <silent> <PageUp> :bprevious<CR>
 nnoremap <silent> <PageDown> :bnext<CR>
 
@@ -90,28 +88,28 @@ nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
-nnoremap mk :make<CR>
-
+" Quick esc remap
 inoremap jk <Esc>
 
-nnoremap Y y$
-
+" Neovim Terminal Leader mappings
 tnoremap <leader>et <C-\><C-n>
 nnoremap <leader>t :term<CR>
 
-"Leader mappings
+" Vanilla Leader mappings
 nnoremap <leader>h :sp<CR>
 nnoremap <leader>v :vsp<CR>
-nnoremap <leader>ev :split $MYVIMRC<CR>
-nnoremap <leader>nt :NERDTree<CR>
 nnoremap <space><space> <C-w>w
-nnoremap <leader>m <C-w>o
+
+nnoremap <leader>ev :split $MYVIMRC<CR>
+
+nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>o :e 
+
+" Plugin Leader mappings
+nnoremap <leader>nt :NERDTree<CR>
 nnoremap <leader>r :!ruby %<CR>
 nnoremap <leader>T :TestNearest<CR>
 nnoremap <leader>s :!rspec<CR>
 nnoremap <leader>cs :!reek %<CR>
-nnoremap <leader>w :w<CR>
-nnoremap <leader>beau :call HtmlBeautify()<CR>
 nnoremap <leader>j :!jade -P %<CR>
-nnoremap <leader>o :e 
