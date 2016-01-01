@@ -1,6 +1,6 @@
 *urxvt.scrollBar: false
-URxvt*font: xft:Termsyn:style=Regular:size=12
-URxvt*boldFont: xft:Termsyn:style=Bold:size=12
+URxvt*font: xft:termsyn:style=Regular:size=12
+URxvt*boldFont: xft:termsyn:style=Bold:size=12
 URxvt.background: #333333
 URxvt.foreground: white
 *color4:#1e90ff
@@ -8,7 +8,7 @@ URxvt.foreground: white
 *urxvt.perl-ext-common: default,url-select,clipboard,tabbedex,fullscreen
 *urxvt.keysym.M-c: perl:clipboard:copy
 *urxvt.keysym.M-v: perl:clipboard:paste
-URxvt*geometry: 125x50
+URxvt*geometry: 200x60
 *urxvt.url-select.underline: true
 *urxvt.urlLauncher: firefox
 URxvt*saveLines: 2048
