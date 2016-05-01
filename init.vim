@@ -39,6 +39,7 @@ Plug 'mhinz/vim-signify'
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/seoul256.vim'
 
 " Other
 Plug 'benekastah/neomake'
@@ -57,6 +58,8 @@ syntax on
 set noet ci pi sts=0 sw=4 ts=4
 set incsearch
 set noswapfile
+
+colo seoul256
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=8

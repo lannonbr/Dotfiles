@@ -1,0 +1,20 @@
+#! /bin/sh
+
+. panel_colors
+
+PANEL_FIFO="/tmp/panel-fifo"
+PANEL_NAME="lemonbar"
+PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+PANEL_HEIGHT=24
+
+if xdo id -a "$PANEL_NAME" > /dev/null; then
+	printf "%s\n" "The panel is already running" >&2
+	exit 1
+fi
+
+[ -e "$PANEL_FIFO" ] & rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+bspc config top_padding $PANEL_HEIGHT
+pspc subscribe report > "$PANEL_FIFO" &
+
+panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_NAME" -g "x$PANEL_HEIGHT" -f "$PANEL_FONT" -F "$COLOR_FG" -B "$COLOR_BG" | sh &
