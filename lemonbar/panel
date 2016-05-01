@@ -17,4 +17,4 @@ mkfifo "$PANEL_FIFO"
 bspc config top_padding $PANEL_HEIGHT
 pspc subscribe report > "$PANEL_FIFO" &
 
-panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_NAME" -g "x$PANEL_HEIGHT" -f "$PANEL_FONT" -F "$COLOR_FG" -B "$COLOR_BG" | sh &
+panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_NAME" -g "1900x$PANEL_HEIGHT+10+8" -f "$PANEL_FONT" -F "$COLOR_FG" -B "$COLOR_BG" | sh &
