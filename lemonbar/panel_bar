@@ -11,6 +11,16 @@ network() {
 		echo "online" || echo "offline"
 }
 
+volume() {
+	volume=`pamixer --get-volume`
+	mute=`pamixer --get-mute`
+	if [ $mute = true ]; then
+		echo "MUTE"
+	else
+		echo $volume
+	fi
+}
+
 groups() {
 	cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
 	tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
@@ -31,7 +41,7 @@ while :; do
 	p="  "
 	l="$(groups)"
 	c="$(clock)"
-	r="net: $(network) | bat: $(battery)%"
+	r="vol: $(volume)% | net: $(network) | bat: $(battery)%"
 	echo "%{l}$p$l%{c}$c%{r}$r$p"
 	sleep 1
 done
