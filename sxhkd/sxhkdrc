@@ -6,6 +6,8 @@
 super + Return
 	mate-terminal
 
+# Other programs
+
 super + e
 	thunar
 
@@ -18,6 +20,9 @@ super + n
 super + a
 	atom
 
+alt + g
+	gitkraken
+
 # program launcher
 super + space
 	dmenu_run
@@ -29,6 +34,15 @@ super + Escape
 #
 # bspwm hotkeys
 #
+
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -5%
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +5%
+
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
 
 # quit bspwm normally
 super + alt + Escape
@@ -147,3 +161,5 @@ super + button{1-3}
 # end move/resize
 super + @button{1-3}
 	bspc pointer -u
+
+
