@@ -1,20 +1,24 @@
-alias sl='ls'
-alias rm='rm -i'
-alias ls='ls --color=auto'
+# My shell aliases
 
-alias update='pacaur -Syu'
-alias search='pacaur -Ss'
+# ls
+alias ls='ls --color=auto'
+alias sl='ls'
+
+# Pacaur
 alias download='pacaur -S'
+alias search='pacaur -Ss'
+alias update='pacaur -Syyu'
 alias remove='pacaur -R'
 
-alias python='python2'
-alias vim="nvim"
+# Vim
+alias vim='nyaovim'
 
-alias fsi="fsharpi"
-alias fsc="fsharpc"
+# Dual monitor
+alias dualMon='~/.screenlayout/dualMon.sh'
 
-alias wego='pushd $HOME/devel/wego/bin/ && ./wego && popd'
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-alias touchscreen="xinput --map-to-output 12 eDP1"
-alias restartnetwork="systemctl restart NetworkManager.service"
-alias backup="~/Documents/backup.sh"
+# Configs
+alias zshrc="vim ~/.zshrc"
+alias bspwmrc="vim ~/.config/bspwm/bspwmrc"
+alias sxhkdrc="vim ~/.config/sxhkd/sxhkdrc"
+alias vimrc="vim ~/.config/nvim/init.vim"
+alias aliases="vim ~/.aliases"
