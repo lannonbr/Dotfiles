@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	mate-terminal
+	urxvt
 
 # Other programs
 
@@ -13,9 +13,6 @@ super + e
 
 super + o
 	vivaldi-stable
-
-super + n
-	nyaovim
 
 super + a
 	atom
@@ -31,9 +28,10 @@ super + space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+
 #
-# bspwm hotkeys
-#
+# Audio
+# 
 
 XF86AudioLowerVolume
 	pactl set-sink-volume 0 -5%
@@ -43,6 +41,12 @@ XF86AudioRaiseVolume
 
 XF86AudioMute
 	pactl set-sink-mute 0 toggle
+	
+
+#
+# bspwm hotkeys
+#
+
 
 # quit bspwm normally
 super + alt + Escape
