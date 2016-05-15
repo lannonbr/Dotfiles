@@ -9,9 +9,7 @@ call plug#begin()
 " Languages
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'kongo2002/fsharp-vim'
-Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
-Plug 'zah/nim.vim'
-Plug 'JuliaLang/julia-vim'
+Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 
 " Text Objects
 Plug 'kana/vim-textobj-entire'
@@ -20,15 +18,10 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-function'
 Plug 'nelstrom/vim-textobj-rubyblock'
 
-" Testing
-Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
-Plug 'janko-m/vim-test'
-
 " Search & Autocomplete
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ervandew/supertab'
-Plug 'matchit.zip'
 Plug 'rstacruz/sparkup'
 
 " Git
@@ -47,7 +40,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-bundler'
 Plug 'vim-utils/vim-man'
-Plug 'gorodinskiy/vim-coloresque'
 
 call plug#end()
 
@@ -112,7 +104,4 @@ nnoremap <leader>o :e
 " Plugin Leader mappings
 nnoremap <leader>nt :NERDTree<CR>
 nnoremap <leader>r :!ruby %<CR>
-nnoremap <leader>T :TestNearest<CR>
-nnoremap <leader>s :!rspec<CR>
-nnoremap <leader>cs :!reek %<CR>
-nnoremap <leader>j :!jade -P %<CR>
+nnoremap <leader>j :!pug -P %<CR>
