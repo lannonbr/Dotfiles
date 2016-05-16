@@ -41,7 +41,7 @@ while :; do
 	p="  "
 	l="$(groups)"
 	c="$(clock)"
-	r="vol: $(volume)% | net: $(network) | bat: $(battery)%"
+	r="vol: $(volume)% | net: $(network) | bat: $(battery)"
 	echo "%{l}$p$l%{c}$c%{r}$r$p"
 	sleep 1
 done
