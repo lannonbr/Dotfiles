@@ -5,16 +5,14 @@ alias ls='ls --color=auto'
 alias sl='ls'
 
 # Pacaur
-alias download='pacaur -S'
-alias search='pacaur -Ss'
-alias update='pacaur -Syyu'
-alias remove='pacaur -R'
+alias download='sudo xbps-install -S'
+alias update='sudo xbps-install -Su'
 
 # Vim
-alias vim='nyaovim'
+alias vim='nvim'
 
 # Dual monitor
-alias dualMon='~/.screenlayout/dualMon.sh'
+#alias dualMon='~/.screenlayout/dualMon.sh'
 
 # Configs
 alias zshrc="vim ~/.zshrc"
