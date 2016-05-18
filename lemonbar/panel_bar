@@ -12,9 +12,9 @@ network() {
 }
 
 volume() {
-	volume=`pamixer --get-volume`
-	mute=`pamixer --get-mute`
-	if [ $mute = true ]; then
+	volume=`amixer get Master | awk '$0~/%/{print $4}' | tr -d '[]'`
+	mute=`amixer get Master | awk '{print $6}' | tr -d '[]\n'`
+	if [ $mute = 'off' ]; then
 		echo "MUTE"
 	else
 		echo $volume
@@ -41,7 +41,7 @@ while :; do
 	p="  "
 	l="$(groups)"
 	c="$(clock)"
-	r="vol: $(volume)% | net: $(network) | bat: $(battery)"
+	r="vol: $(volume) | net: $(network) | bat: $(battery)"
 	echo "%{l}$p$l%{c}$c%{r}$r$p"
 	sleep 1
 done
